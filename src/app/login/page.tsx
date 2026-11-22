@@ -5,6 +5,7 @@ import { Input } from "@/components/Input";
 import { useState } from "react";
 import { useAuth } from "@/auth/AuthProvider";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function Page() {
   // username / password は useState で持つ
@@ -82,6 +83,12 @@ export default function Page() {
           {submitting ? "ログイン中..." : "ログイン"}
         </Button>
       </form>
+      <p className="mt-4 text-center text-sm text-gray-600">
+        アカウントがない場合は{" "}
+        <Link href="/signup" className="text-blue-500 hover:underline">
+          新規登録
+        </Link>
+      </p>
     </div>
   );
 }
