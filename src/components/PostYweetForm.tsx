@@ -5,7 +5,6 @@ import { Textarea } from "./Textarea";
 import { Button } from "./Button";
 import { useState } from "react";
 import { useAuth } from "@/auth/AuthProvider";
-import { setegid } from "node:process";
 
 type PostYweetFormProps = {
    /** 投稿に成功したとき、作成された Yweet を親に渡す */
