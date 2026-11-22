@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type YweetCardProps = {
   username: string;
   content: string;
@@ -16,7 +18,7 @@ export function YweetCard({ username, content, avatarUrl, onDelete }: YweetCardP
   return (
     <article className="border-b border-gray-200 bg-white px-4 py-3">
       <div className="flex gap-3">
-        <img
+        <Image
           src={src}
           alt=""
           width={40}
@@ -36,7 +38,7 @@ export function YweetCard({ username, content, avatarUrl, onDelete }: YweetCardP
               </button>
             )}
           </div>
-          <p className="mt-1 whitespace-pre-wrap break-words text-gray-800">
+          <p className="mt-1 whitespace-pre-wrap wrap-break-words text-gray-800">
             {content}
           </p>
         </div>
